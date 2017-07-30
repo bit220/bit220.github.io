@@ -1,0 +1,20 @@
+//colors
+$white: #ffffff;
+$red: #e45028;
+$red-hover: #c1401e;
+$yellow: #f9b43b;
+$black: #2f3234;
+$black-hover: #1f2122;
+$grey: #58595a;
+
+// layout
+@import "_misc/fonts.scss";
+@import "_misc/mixins.scss";
+@import "_misc/normalize.scss";
+@import "_misc/adjustment.scss";
+@import "plugins/font-awesome.scss";
+
+//sections
+@import "sections/main-display.scss";
+@import "sections/we-the-best.scss";
+@import "sections/opinions.scss";

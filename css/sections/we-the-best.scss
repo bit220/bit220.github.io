@@ -1,0 +1,52 @@
+.we-the-best {
+	background: url('/img/best-bg.jpg') center -100px no-repeat;
+	background-size: cover;
+   text-align: center;
+}
+
+.we-the-best__title {
+   @include gagalin;
+   color: $black;
+   font-size: 72px;	
+   display: inline-block;
+   margin-top: 54px;
+}
+
+.bullets {
+	margin-top: 64px;
+}
+
+.bullets__block {
+	width: 317px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.bullets__img {
+	height: 105px;
+}
+
+.bullets__title {
+	@include lifehack;
+   color: $black;
+   font-size: 23px;
+   margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.bullets__desc {
+	font-size: 14px;
+	color: $grey;
+	width: 300px;
+	display: inline-block;
+   @include ubuntu;
+   margin-left: 5px;
+   line-height: 24px;
+}
+
+.natural__title {
+	width: 300px;
+	display: inline-block;
+	line-height: 30px;
+	margin-bottom: 7px;
+}
