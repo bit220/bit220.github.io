@@ -9,13 +9,14 @@
 }
 
 .display-navigation {
-   position: absolute;
+   position: fixed;
+   // position: absolute;
    right: 65px;
    top: 80px;
+   z-index: 10000;
 }
 
 .display-navigation__list {
-   position: fixed;
 }
 
 .display-navigation__item {
@@ -52,7 +53,7 @@
 }
 
 .logo {
-   margin-left: 77px;
+   margin-left: 7px;
 }
 
 .logo, .menu, .menu__list, .menu__item, .order-btn {
@@ -114,9 +115,14 @@
    }
 }
 
+.burger {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
 .burger__img {
-   margin-left: 96px;
-   margin-top: -3px;
+   margin-left: 24px;
    vertical-align: middle;
 }
 
@@ -145,5 +151,5 @@
 .arrow-scroll {
    position: absolute;
    left: 50%;
-   top: 120%;
+   bottom: 5%;
 }

@@ -1,7 +1,13 @@
 .we-the-best {
-	background: url('/img/best-bg.jpg') center -100px no-repeat;
+	background: url('/img/best-bg.jpg') center center no-repeat;
 	background-size: cover;
-   text-align: center;
+	margin-top: -1px;
+
+   .container {
+   	position: relative;
+   	text-align: center;
+   }
+   
 }
 
 .we-the-best__title {
@@ -13,7 +19,10 @@
 }
 
 .bullets {
-	margin-top: 64px;
+	// margin-top: 64px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .bullets__block {
