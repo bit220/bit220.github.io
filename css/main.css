@@ -440,7 +440,7 @@ template {
 html {
   font-size: 18px; }
 
-body, html {
+html, body {
   width: 100%;
   height: 100%; }
 
@@ -450,7 +450,7 @@ body {
   background: #ffffff; }
 
 .wrapper {
-  min-height: 100%;
+  width: 100%;
   overflow: hidden;
   position: relative; }
 
@@ -474,21 +474,21 @@ a {
   text-decoration: none; }
 
 section {
-  width: 100%;
-  min-height: 650px;
-  height: 100vh; }
+  width: 100%; }
 
 .main-display {
-  background: url("/img/salad-bg.jpg") center center no-repeat;
+  background: url("../img/salad-bg.jpg") center center no-repeat;
   background-size: cover;
-  padding-top: 10px; }
+  padding-top: 10px;
+  height: 100vh;
+  min-height: 650px; }
   .main-display .container {
     position: relative; }
 
 .display-navigation {
   position: fixed;
   right: 65px;
-  top: 80px;
+  top: 90px;
   z-index: 10000; }
 
 .display-navigation__item {
@@ -561,6 +561,7 @@ section {
   color: #e45028; }
 
 .order-btn {
+  display: inline-block;
   background: #e45028;
   padding: 8px 15px;
   border-radius: 5px;
@@ -571,9 +572,9 @@ section {
 .burger {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  -webkit-transform: translateY(-60%);
+  -ms-transform: translateY(-60%);
+  transform: translateY(-60%); }
 
 .burger__img {
   margin-left: 24px;
@@ -600,13 +601,15 @@ section {
 
 .arrow-scroll {
   position: absolute;
-  left: 50%;
+  left: 49%;
   bottom: 5%; }
 
 .we-the-best {
-  background: url("/img/best-bg.jpg") center center no-repeat;
+  background: url("../img/best-bg.jpg") center center no-repeat;
   background-size: cover;
-  margin-top: -1px; }
+  margin-top: -1px;
+  height: 100vh;
+  min-height: 650px; }
   .we-the-best .container {
     position: relative;
     text-align: center; }
@@ -618,14 +621,14 @@ section {
   display: inline-block;
   margin-top: 54px; }
 
-.bullets {
+.bullets__list {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  -webkit-transform: translateY(-40%);
+  -ms-transform: translateY(-40%);
+  transform: translateY(-40%); }
 
-.bullets__block {
+.bullets__item {
   width: 317px;
   display: inline-block;
   vertical-align: top; }
@@ -655,16 +658,13 @@ section {
   line-height: 30px;
   margin-bottom: 7px; }
 
-.opinions {
-  width: 100%; }
-
 .opinions__item {
   float: left;
   width: 25%;
   height: 29vw;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  padding: 45px 20px;
+  padding: 42px 22px;
   color: #ffffff;
   position: relative; }
   .opinions__item:after {
@@ -700,7 +700,7 @@ section {
   display: inline-block;
   font-family: 'ubunturegular';
   font-size: 14px;
-  margin-top: 21px;
+  margin-top: 18px;
   line-height: 24px; }
 
 .opinion__btn {
@@ -720,33 +720,33 @@ section {
     background: #1f2122; }
 
 .opinion__img_1 {
-  background: url("/img/opinions/photo1.jpg") center center no-repeat;
+  background: url("../img/opinions/photo1.jpg") center center no-repeat;
   background-size: cover; }
 
 .opinion__img_2 {
-  background: url("/img/opinions/photo2.jpg") center center no-repeat;
+  background: url("../img/opinions/photo2.jpg") center center no-repeat;
   background-size: cover; }
 
 .opinion__img_3 {
-  background: url("/img/opinions/photo3.jpg") center center no-repeat;
+  background: url("../img/opinions/photo3.jpg") center center no-repeat;
   background-size: cover; }
 
 .opinion__img_4 {
-  background: url("/img/opinions/photo4.jpg") center center no-repeat;
+  background: url("../img/opinions/photo4.jpg") center center no-repeat;
   background-size: cover; }
 
 .opinion__img_5 {
-  background: url("/img/opinions/photo5.jpg") center center no-repeat;
+  background: url("../img/opinions/photo5.jpg") center center no-repeat;
   background-size: cover; }
 
 .opinion__img_6 {
-  background: url("/img/opinions/photo6.jpg") center center no-repeat;
+  background: url("../img/opinions/photo6.jpg") center center no-repeat;
   background-size: cover; }
 
 .opinion__img_7 {
-  background: url("/img/opinions/photo7.jpg") center center no-repeat;
+  background: url("../img/opinions/photo7.jpg") center center no-repeat;
   background-size: cover; }
 
 .opinion__img_8 {
-  background: url("/img/opinions/photo8.jpg") center center no-repeat;
+  background: url("../img/opinions/photo8.jpg") center center no-repeat;
   background-size: cover; }

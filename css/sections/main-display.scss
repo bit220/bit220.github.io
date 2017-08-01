@@ -1,7 +1,9 @@
 .main-display {
-   background: url('/img/salad-bg.jpg') center center no-repeat;
+   background: url('../img/salad-bg.jpg') center center no-repeat;
    background-size: cover;
    padding-top: 10px;
+   height: 100vh;
+   min-height: 650px;
 
    .container {
       position: relative;
@@ -10,9 +12,8 @@
 
 .display-navigation {
    position: fixed;
-   // position: absolute;
    right: 65px;
-   top: 80px;
+   top: 90px;
    z-index: 10000;
 }
 
@@ -105,6 +106,7 @@
 }
 
 .order-btn {
+   display: inline-block;
    background: $red;
    padding: 8px 15px;
    border-radius: 5px;
@@ -118,7 +120,7 @@
 .burger {
    position: absolute;
    top: 50%;
-   transform: translateY(-50%);
+   transform: translateY(-60%);
 }
 
 .burger__img {
@@ -150,6 +152,6 @@
 
 .arrow-scroll {
    position: absolute;
-   left: 50%;
+   left: 49%;
    bottom: 5%;
 }

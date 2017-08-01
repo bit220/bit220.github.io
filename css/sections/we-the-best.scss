@@ -1,7 +1,9 @@
 .we-the-best {
-	background: url('/img/best-bg.jpg') center center no-repeat;
+	background: url('../img/best-bg.jpg') center center no-repeat;
 	background-size: cover;
 	margin-top: -1px;
+	height: 100vh;
+	min-height: 650px;
 
    .container {
    	position: relative;
@@ -18,14 +20,13 @@
    margin-top: 54px;
 }
 
-.bullets {
-	// margin-top: 64px;
+.bullets__list {
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%);
+	transform: translateY(-40%);
 }
 
-.bullets__block {
+.bullets__item {
 	width: 317px;
 	display: inline-block;
 	vertical-align: top;
