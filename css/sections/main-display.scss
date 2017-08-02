@@ -1,5 +1,5 @@
 .main-display {
-   background: url('../img/salad-bg.jpg') center center no-repeat;
+   background: url('../img/main-display/salad-bg.jpg') center center no-repeat;
    background-size: cover;
    padding-top: 10px;
    height: 100vh;
@@ -15,9 +15,6 @@
    right: 65px;
    top: 90px;
    z-index: 10000;
-}
-
-.display-navigation__list {
 }
 
 .display-navigation__item {

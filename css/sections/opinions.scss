@@ -1,14 +1,17 @@
 .opinions {
+	height: 100vh;
+	min-height: 650px;
 }
 
 .opinions__list {
 	@extend %clearfix;
+	height: 100%;
 }
 
 .opinions__item {
 	float: left;
 	width: 25%;
-	height: 29vw;
+	height: 50%;
 	filter: grayscale(100%);
 	padding: 42px 22px;
 	color: $white;

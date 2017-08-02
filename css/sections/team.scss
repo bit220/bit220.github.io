@@ -1,12 +1,107 @@
-.Rectangle_1 {
-  background-image: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
-  background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
-  opacity: 0.929;
+.team {
+  height: 100vh;
+  min-height: 650px;
+  background: url('../img/team/team-bg.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.team__layer {
   position: absolute;
-  left: 560px;
-  top: 1950px;
-  width: 542px;
-  height: 650px;
-  z-index: 109;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 49%;
+  background: $black;
+  opacity: .929;
+  padding: 66px 0px 0px 80px;  
+}
+
+.team__block {
+}
+
+.team__title {
+  @include gagalin;
+  font-size: 72px;
+  color: $yellow;
+}
+
+.team__list {
+  margin-top: 55px;
+}
+
+.team__item {
+  margin-left: 19px;
+  margin-bottom: 25px;
+
+  &.active {
+    .team__link {
+      color: $yellow;
+
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+
+    .team-content {
+      padding-top: 11px;
+      padding-bottom: 10px;
+      height: 100%;
+    }
+  }
+}
+
+.team__link {
+  font-size: 14px;
+  @include gagalin;
+  color: $white;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 100%;
+    border: 5px solid transparent;
+    border-top-color: $yellow;
+    border-bottom: 0;
+    margin-right: 10px;
+    margin-top: 11px;
+  }
+}
+
+.team-content {
+  @extend %clearfix;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.team-content__img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: url('../img/team/aphex.jpg') -19px center no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.team-content__text {
+  float: left;
+  width: 230px;
+  padding-left: 4%;
+  color: $white;
+}
+
+.team-content__title {
+  @include ubuntu(bold);
+  font-size: 14px;  
+}
+
+.team-content__desc {
+  @include ubuntu(light);
+  font-size: 14px;
+  margin-top: 11px;
+  line-height: 24px;
 }
