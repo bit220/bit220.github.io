@@ -1,0 +1,165 @@
+.hero {
+   background: url('../img/hero/salad-bg.jpg') center center no-repeat;
+   background-size: cover;
+   padding-top: rem(8px);
+}
+
+.hero__wrapper {
+   height: 76%;
+
+   @include tablets {
+      height: 86%;
+   }
+
+   @include phones {
+      height: 91%;
+   }
+}
+
+.header {
+   display: flex;
+}
+
+.header__btns {
+   display: flex;
+   align-items: center;
+   margin-left: auto;
+   font-size: rem(13px);
+}
+
+.nav {
+   @include tablets {
+      display: none;
+   }
+}
+
+.nav__list {
+   display: flex;
+   align-items: center;
+}
+
+.nav__item {
+   display: flex;
+   align-items: center;
+
+   &:last-child {
+      &:after {
+         display: none;
+      }
+   }
+
+   &:after {
+      content: "";
+      display: block;
+      width: rem(4px);
+      height: rem(4px);
+      background: #fff;
+      border-radius: 50%;
+      margin: 0 rem(16px);
+   }
+}
+
+.nav__link {
+   color: #fff;
+   text-transform: uppercase;
+
+   &:hover {
+      color: $yellow;
+   }
+}
+
+.hamburger {
+   display: none;
+
+   @include tablets {
+      display: block;
+      margin-left: rem(30px);
+   }
+}
+
+.hero__container {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.hero__present {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+
+   @include tablets {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+   }
+}
+
+.hero__img {
+   width: 50%;
+
+   img {
+      max-width: 100%;
+   }
+
+   @include tablets {
+      width: 100%;
+   }
+
+   @include phones {
+      width: 82%;
+   }
+}
+
+.hero__text {
+   width: 47%;
+   margin-top: rem(58px);
+
+   .section-title {
+
+      @include phones {
+         font-size: rem(63px);
+      }
+   }
+
+   @include tablets {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: rem(10px);
+   }
+
+   @include phones {
+      margin-top: rem(20px);
+   }
+}
+
+.hero__desc {
+   @include lifehack;
+   font-size: rem(62px);
+   color: $white;
+   line-height: rem(62px);
+   margin-top: rem(10px);
+
+   @include tablets {
+      width: rem(500px);
+   }
+
+   @include phones {
+      margin-top: 0;
+      font-size: rem(52px);
+   }
+}
+
+.arrow-scroll {
+   position: absolute;
+   left: 49%;
+   bottom: 5%;
+
+   @include tablets {
+      bottom: 3%;
+   }
+}

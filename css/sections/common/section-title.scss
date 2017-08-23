@@ -1,0 +1,22 @@
+.section-title {
+	font-size: rem(72px);
+	@include gagalin;
+
+	&_color_yellow {
+		color: $yellow;
+	}
+
+	&_color_black {
+		color: $black;
+	}
+
+	&_order {
+		color: $yellow;
+		line-height: rem(62px);
+		text-align: center;
+	}
+
+	@include phones {
+		font-size: rem(50px);
+	}
+}

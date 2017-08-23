@@ -7,15 +7,35 @@ $black: #2f3234;
 $black-hover: #1f2122;
 $grey: #58595a;
 
-// layout
-@import "_misc/fonts.scss";
-@import "_misc/mixins.scss";
+//resolutions
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
+//normalize
 @import "_misc/normalize.scss";
+
+//media
+@import "_misc/media.scss";
+
+// layout
+@import "_misc/mixins.scss";
+@import "_misc/fonts.scss";
+@import "plugins/font-awesome.scss";
 @import "_misc/adjustment.scss";
 
+//common
+@import "sections/common/btn.scss";
+@import "sections/common/section-title.scss";
+@import "sections/common/fixed-menu.scss";
+
 //sections
-@import "sections/main-display.scss";
+@import "sections/hero.scss";
 @import "sections/we-the-best.scss";
 @import "sections/burgers.scss";
 @import "sections/team.scss";
+@import "sections/menu.scss";
 @import "sections/opinions.scss";
+@import "sections/order.scss";
+@import "sections/contacts.scss";

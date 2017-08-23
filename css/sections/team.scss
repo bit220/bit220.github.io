@@ -1,6 +1,4 @@
 .team {
-  height: 100vh;
-  min-height: 650px;
   background: url('../img/team/team-bg.jpg') center center no-repeat;
   background-size: cover;
   position: relative;
@@ -12,27 +10,49 @@
   right: 0;
   bottom: 0;
   width: 49%;
-  background: $black;
-  opacity: .929;
-  padding: 66px 0px 0px 80px;  
+  background: rgba($black, .93);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .team__block {
-}
+  width: rem(377px);
+  height: rem(520px);
 
-.team__title {
-  @include gagalin;
-  font-size: 72px;
-  color: $yellow;
+  @include tablets {
+    text-align: center;
+    height: 80%;
+  }
+
+  @include phones {
+    text-align: center;
+    height: 87%;
+  }
 }
 
 .team__list {
-  margin-top: 55px;
+  margin-top: rem(58px);
+
+  @include tablets {
+    margin-top: rem(99px);
+  }
+
+  @include phones {
+    margin-top: rem(77px);
+  }
 }
 
 .team__item {
-  margin-left: 19px;
-  margin-bottom: 25px;
+  margin-bottom: rem(28px);
+
+  @include tablets {
+    margin-bottom: rem(24px);
+  }
 
   &.active {
     .team__link {
@@ -44,64 +64,109 @@
     }
 
     .team-content {
-      padding-top: 11px;
-      padding-bottom: 10px;
-      height: 100%;
+      padding-top: rem(14px);
+      padding-bottom: rem(8px);
+      height: auto;
+      margin-left: rem(15px);
+
+      @include tablets {
+        padding-top: rem(10px);
+        padding-bottom: rem(2px);
+      }
     }
   }
 }
 
 .team__link {
-  font-size: 14px;
+  font-size: rem(14px);
   @include gagalin;
   color: $white;
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  transition: .3s;
+  margin-left: rem(17px);
+
+  @include tablets {
+    font-size: rem(24px);
+    margin-left: rem(35px);
+  }
+
+  &:hover {
+    color: $yellow;
+  }
 
   &:before {
     content: "";
     display: block;
+    width: 0;
+    height: 0;
     position: absolute;
-    right: 100%;
-    border: 5px solid transparent;
+    top: 45%;
+    right: 109%;
+    border: rem(5px) solid transparent;
     border-top-color: $yellow;
     border-bottom: 0;
-    margin-right: 10px;
-    margin-top: 11px;
+
+    @include tablets {
+      right: 105%;
+    }
   }
 }
 
 .team-content {
-  @extend %clearfix;
+  display: flex;
   padding-top: 0;
   padding-bottom: 0;
   height: 0;
   overflow: hidden;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .team-content__img {
-  float: left;
-  width: 100px;
-  height: 100px;
-  background: url('../img/team/aphex.jpg') -19px center no-repeat;
-  background-size: cover;
+  width: rem(100px);
+  height: rem(100px);
+  overflow: hidden;
   border-radius: 50%;
+  position: relative;
+}
+
+.team-content__img-pic {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  height: 100%;
 }
 
 .team-content__text {
-  float: left;
-  width: 230px;
-  padding-left: 4%;
+  width: rem(230px);
+  padding-left: 6%;
   color: $white;
+
+  @include tablets {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .team-content__title {
   @include ubuntu(bold);
-  font-size: 14px;  
+  font-size: rem(14px);  
+
+  @include tablets {
+    margin-top: rem(20px);
+  }
 }
 
 .team-content__desc {
   @include ubuntu(light);
-  font-size: 14px;
-  margin-top: 11px;
-  line-height: 24px;
+  font-size: rem(14px);
+  margin-top: rem(11px);
+  line-height: rem(24px);
 }

@@ -1,0 +1,84 @@
+.contacts {
+	background: url('../img/map/map-with-markers-bg.jpg') center center no-repeat;
+	background-size: cover;
+	position: relative;
+	color: $white;
+}
+
+.footer {
+	background: url('../img/footer/footer-bg.jpg') center center no-repeat;
+	background-size: cover;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: rem(9px) rem(80px);
+	font-size: rem(14px);
+	@include ubuntu(light);
+
+	@include tablets {
+		padding: rem(10px) rem(8px);
+	}
+
+	@include phones {
+		padding: rem(15px) rem(8px);
+	}
+	
+
+	.container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex: 1;
+		justify-content: space-between;
+		width: 100%;
+
+		@include phones {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+}
+
+.contact-details {
+
+	@include tablets {
+		margin-left: rem(15px);
+	}
+	
+}
+
+.phone {
+	color: $red;
+	font-size: rem(15px);
+	@include ubuntu(medium);
+	line-height: rem(15px);
+   margin-top: rem(5px);
+
+	@include tablets {
+		margin-top: rem(8px);
+	}
+}
+
+.socials {
+	text-align: right;
+	font-size: rem(22px);
+	margin-top: rem(4px);
+
+	@include tablets {
+		margin-top: 0;
+	}
+
+	@include phones {
+		margin-top: rem(11px);
+	}
+
+	.fa {
+		padding-left: rem(16px);
+		color: #585858;
+
+		&:hover {
+			color: $white;
+		}
+	}
+}

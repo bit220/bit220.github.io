@@ -1,0 +1,227 @@
+.order {
+	background: url('../img/order/shipping-bg.jpg') center center no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.order__wrapper {
+	height: 91%;
+
+	@include tablets {
+		height: 86%;
+	}
+
+	@include phones {
+		height: 99%;
+	}
+}
+
+form {
+	margin-top: rem(82px);
+
+  @include tablets {
+    margin-top: rem(80px);
+  }
+
+  @include phones {
+    margin-top: rem(24px);
+  }
+}
+
+.form {
+	display: flex;
+	color: $white;
+	@include ubuntu(light);
+	font-size: rem(14px);
+
+	@include tablets {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.form__col {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin-left: rem(20px);
+
+	@include tablets {
+		width: 66%;
+
+		&:last-child {
+			margin-left: 0;
+
+			.form__row:last-child {
+				margin-bottom: 0;
+				margin-top: rem(20px);
+			}
+
+			@include phones {
+				.form__row {
+					justify-content: center;
+					margin-bottom: rem(28px);
+				}
+			}
+		}
+
+		&:first-child {
+
+			@include phones {
+				.form__row:last-child {
+					
+					.form__block:last-child {
+						display: none;
+					}
+				}
+			}
+
+			
+		}
+	}
+
+	@include phones {
+		width: 100%;
+	}
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.form__row {
+	display: flex;
+	margin-bottom: rem(17px);
+	justify-content: flex-start;
+}
+
+.form__block {
+	width: 100%;
+	margin-left: rem(20px);
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.label {
+	margin-bottom: rem(5px);
+}
+
+.form__input {
+	width: 100%;
+	font-size: rem(16px);
+	padding: rem(8px);
+	background: $white;
+	border-radius: rem(5px);
+	border: 0;
+
+	&:focus {
+		outline-color: $yellow;
+	}
+}
+
+.textarea {
+	height: rem(110px);
+	resize: none;
+	width: 100%;
+	border-radius: rem(5px);
+}
+
+.form__block_btns {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: auto;
+	position: relative;
+	cursor: pointer;
+}
+
+.form__radio-hidden {
+	position: absolute;
+	left: rem(-9999px);
+}
+
+.form__radio-visible {
+	width: rem(15px);
+	height: rem(15px);
+	background: $white;
+	border-radius: 50%;
+	position: relative;
+
+	&:after {
+		content: "";
+		display: none;
+		width: rem(8px);
+		height: rem(8px);
+		border-radius: 50%;
+		background: $red;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.form__radio-hidden:checked + .form__radio-visible:after {
+	display: block;
+}
+
+.form__btn-title {
+	margin-left: rem(9px);
+}
+
+.form__check-hidden {
+	position: absolute;
+	left: rem(-9999px);
+}
+
+.form__check-visible {
+	width: rem(15px);
+	height: rem(15px);
+	background: $white;
+	position: relative;
+
+	&:after {
+		content: "";
+		display: none;
+		width: 70%;
+		height: 70%;
+		background: url('../img/order/check.png') center center no-repeat;
+		background-size: contain;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.form__check-hidden:checked + .form__check-visible:after {
+	display: block;
+}
+
+.form__btns {
+	display: flex;	
+}
+
+.form__btns-submit {
+	@extend .btn;
+	margin-left: 0;
+	padding: rem(10px) rem(16px);
+	border: 0;
+}
+
+.form__btns-reset {
+	background: transparent;
+	color: $white;
+	border: 0;
+	margin-left: rem(17px);
+}

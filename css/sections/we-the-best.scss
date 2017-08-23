@@ -1,62 +1,89 @@
 .we-the-best {
+	margin-top: rem(-1px);
 	background: url('../img/we-the-best/best-bg.jpg') center center no-repeat;
 	background-size: cover;
-	margin-top: -1px;
-	height: 100vh;
-	min-height: 650px;
+	justify-content: center;
+	padding-bottom: rem(115px);
 
-   .container {
-   	position: relative;
-   	text-align: center;
-   }
-   
-}
+	@include tablets {
+		padding-bottom: rem(265px);
+	}
 
-.we-the-best__title {
-   @include gagalin;
-   color: $black;
-   font-size: 72px;	
-   display: inline-block;
-   margin-top: 54px;
+	@include phones {
+		padding-bottom: rem(145px);
+	}
+
+	.container {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 
 .bullets__list {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-40%);
+	margin-top: rem(60px);
+	display: flex;
+
+		@include tablets {
+			margin-top: rem(150px);
+		}
+
+		@include phones {
+			flex-direction: column;
+			margin-top: rem(30px);
+		}
 }
 
 .bullets__item {
-	width: 317px;
-	display: inline-block;
-	vertical-align: top;
+	margin: 0 rem(10px);
+	flex: 1;
+
+	@include phones {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-align: left;
+		margin: rem(5px) 0;
+		width: 100%;
+	}
 }
 
 .bullets__img {
-	height: 105px;
+	height: rem(90px);
+
+	@include phones {
+		width: 30%;
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.bullets__content {
+
+	@include phones {
+		width: 69%;
+		margin-left: 1%;
+	}
 }
 
 .bullets__title {
 	@include lifehack;
    color: $black;
-   font-size: 23px;
-   margin-top: 10px;
-	margin-bottom: 15px;
+   font-size: rem(23px);
+   margin-top: rem(30px);
+	margin-bottom: rem(15px);
 }
 
 .bullets__desc {
-	font-size: 14px;
+	font-size: rem(14px);
 	color: $grey;
-	width: 300px;
 	display: inline-block;
-   @include ubuntu;
-   margin-left: 5px;
-   line-height: 24px;
+   @include ubuntu(light);
+   line-height: rem(24px);
 }
 
 .natural__title {
-	width: 300px;
-	display: inline-block;
-	line-height: 30px;
-	margin-bottom: 7px;
+	line-height: rem(30px);
+	margin-bottom: rem(7px);
 }

@@ -1,0 +1,124 @@
+.menu {
+	position: relative;
+	background: url('../img/menu/menu-main-bg.jpg') center center no-repeat;
+	background-size: cover;
+	color: $white;
+}
+
+.menu__title {
+	font-size: rem(72px);
+	@include gagalin;
+	position: absolute;
+	top: 13%;
+	left: 9%;
+
+	@include tablets {
+		top: 9%;
+		left: 3%;
+	}
+
+	@include phones {
+		font-size: rem(50px);
+		top: 6%;
+		left: 13%;
+	}
+}
+
+.menu__list {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+   justify-content: flex-end;
+}
+
+.menu__item {
+	display: flex;
+	justify-content: flex-end;
+
+	&.active {
+		width: 56%;
+
+		.menu__name {
+			color: $yellow;
+		}
+
+		@include tablets {
+			width: 100%;
+		}
+
+		.menu__content {
+			width: 100%;
+		}
+	}
+}
+
+.menu__block {
+	min-width: rem(80px);
+	position: relative;
+}
+
+.menu__name {
+	text-align: center;
+	width: rem(300px);
+	position: absolute;
+	bottom: 45%;
+	left: rem(-110px);
+	transform: rotate(-90deg);
+	@include gagalin;
+	color: $white;
+	font-size: rem(40px);
+	transition: .3s;
+
+	@include tablets {
+		text-align: left;
+		bottom: 16%;
+	}
+
+	@include phones {
+		bottom: 23%;
+	}
+
+	&:hover {
+		color: $yellow;
+	}
+}
+
+.menu__content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 0;
+	background: rgba($black, .93);
+	overflow: hidden;
+}
+
+.menu__desc {
+	width: 89%;
+	height: 82%;
+	font-size: rem(14px);
+	@include ubuntu(light);
+	line-height: rem(24px);
+
+	@include tablets {
+		width: 87%;
+		height: 89%;
+	}
+}
+
+.meat {
+	background: url('../img/menu/menu-meat-small-bg.jpg') center center no-repeat;
+	background-size: cover;
+}	
+
+.veget {
+	background: url('../img/menu/menu-vegan-small-bg.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.diet {
+	background: url('../img/menu/menu-diet-small-bg.jpg') center center no-repeat;
+	background-size: cover;
+}
