@@ -3,15 +3,15 @@
 	background: url('../img/we-the-best/best-bg.jpg') center center no-repeat;
 	background-size: cover;
 	justify-content: center;
-	padding-bottom: rem(115px);
+	// padding-bottom: rem(115px);
 
-	@include tablets {
-		padding-bottom: rem(265px);
-	}
+	// @include tablets {
+	// 	padding-bottom: rem(265px);
+	// }
 
-	@include phones {
-		padding-bottom: rem(145px);
-	}
+	// @include phones {
+	// 	padding-bottom: rem(145px);
+	// }
 
 	.container {
 		text-align: center;

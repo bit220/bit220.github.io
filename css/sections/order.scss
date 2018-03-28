@@ -1,28 +1,26 @@
 .order {
 	background: url('../img/order/shipping-bg.jpg') center center no-repeat;
 	background-size: cover;
-	display: flex;
 	flex-direction: column;
+	justify-content: center;
 
 	.container {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 	}
 }
 
-.order__wrapper {
-	height: 91%;
+// .order__wrapper { //без one page scroll
+// 	height: 590px;
 
-	@include tablets {
-		height: 86%;
-	}
+// 	@include tablets {
+// 		height: 885px;
+// 	}
 
-	@include phones {
-		height: 99%;
-	}
-}
+// 	@include phones {
+// 		height: 792px;
+// 	}
+// }
 
 form {
 	margin-top: rem(82px);
@@ -54,11 +52,30 @@ form {
 	width: 50%;
 	margin-left: rem(20px);
 
+	&:first-child {
+		margin-left: 0;
+
+		@include tablets {
+			margin-left: rem(20px);
+		}
+
+		@include phones {
+			margin-left: 0;
+
+			.form__row:last-child {
+				
+				.form__block:last-child {
+					display: none;
+				}
+			}
+		}
+	}
+
 	@include tablets {
 		width: 66%;
 
 		&:last-child {
-			margin-left: 0;
+			margin-left: rem(20px);
 
 			.form__row:last-child {
 				margin-bottom: 0;
@@ -66,34 +83,18 @@ form {
 			}
 
 			@include phones {
+				margin-left: 0;
+				
 				.form__row {
 					justify-content: center;
 					margin-bottom: rem(28px);
 				}
 			}
 		}
-
-		&:first-child {
-
-			@include phones {
-				.form__row:last-child {
-					
-					.form__block:last-child {
-						display: none;
-					}
-				}
-			}
-
-			
-		}
 	}
 
 	@include phones {
 		width: 100%;
-	}
-
-	&:first-child {
-		margin-left: 0;
 	}
 }
 

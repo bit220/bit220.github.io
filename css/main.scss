@@ -28,7 +28,9 @@ $phones: 480px;
 //common
 @import "sections/common/btn.scss";
 @import "sections/common/section-title.scss";
+@import "sections/common/hamburger-menu.scss";
 @import "sections/common/fixed-menu.scss";
+@import "sections/common/popup.scss";
 
 //sections
 @import "sections/hero.scss";

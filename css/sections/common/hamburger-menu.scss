@@ -1,0 +1,54 @@
+.hamburger__menu {
+	background: #2E3133;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.hamburger__menu-visible {
+	display: flex;
+}
+
+.hamburger__menu-logo {
+	position: absolute;
+	top: 11px;
+	left: 24px;
+}
+
+.hamburger__menu .nav__hamburger {
+	display: block;
+	text-align: center;
+
+	@include phones {
+		padding-bottom: 145px;
+	}	
+}
+
+.nav__hamburger .nav__list {
+	display: block;
+	font-size: 22px;
+}
+
+.nav__hamburger .nav__item {
+	display: block;
+
+	&:after {
+		display: block;
+		margin: 20px auto;
+		width: 6px;
+		height: 6px;
+	}
+}
+
+.hamburger__menu-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: red;
+	text-decoration: none;
+}

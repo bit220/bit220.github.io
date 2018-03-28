@@ -5,7 +5,7 @@
 }
 
 .hero__wrapper {
-   height: 76%;
+   flex-direction: column;
 
    @include tablets {
       height: 86%;
@@ -42,12 +42,6 @@
    display: flex;
    align-items: center;
 
-   &:last-child {
-      &:after {
-         display: none;
-      }
-   }
-
    &:after {
       content: "";
       display: block;
@@ -56,6 +50,12 @@
       background: #fff;
       border-radius: 50%;
       margin: 0 rem(16px);
+   }
+
+   &:last-child {
+      &:after {
+         display: none;
+      }
    }
 }
 
@@ -72,28 +72,21 @@
    display: none;
 
    @include tablets {
-      display: block;
+      display: flex;
       margin-left: rem(30px);
    }
 }
 
-.hero__container {
-   flex: 1;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-}
-
 .hero__present {
+   height: 700px;
    display: flex;
-   flex-direction: row;
    align-items: center;
    justify-content: center;
 
    @include tablets {
       flex-direction: column;
-      align-items: center;
       text-align: center;
+      height: 100%;
    }
 }
 
@@ -106,16 +99,18 @@
 
    @include tablets {
       width: 100%;
+      padding-top: rem(64px);
    }
 
    @include phones {
       width: 82%;
+      padding-top: 35px;
    }
 }
 
 .hero__text {
    width: 47%;
-   margin-top: rem(58px);
+   padding-top: rem(58px);
 
    .section-title {
 
@@ -129,11 +124,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: rem(10px);
+      padding-top: rem(10px);
    }
 
    @include phones {
-      margin-top: rem(20px);
+      padding-top: rem(20px);
    }
 }
 

@@ -10,6 +10,17 @@
 		color: $black;
 	}
 
+	&_color_white {
+		color: $white;
+		line-height: rem(69px);
+
+		@include phones {
+			width: 90%;
+			margin: auto;
+			line-height: 60px;
+		}
+	}
+
 	&_order {
 		color: $yellow;
 		line-height: rem(62px);

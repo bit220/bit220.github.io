@@ -39,18 +39,15 @@
 	justify-content: flex-end;
 
 	&.active {
-		width: 56%;
-
+		
 		.menu__name {
 			color: $yellow;
 		}
+	}
 
-		@include tablets {
-			width: 100%;
-		}
-
-		.menu__content {
-			width: 100%;
+	&:hover {
+		.menu__name {
+			color: $yellow;
 		}
 	}
 }
@@ -58,12 +55,21 @@
 .menu__block {
 	min-width: rem(80px);
 	position: relative;
+
+	@include tablets {
+		min-width: rem(75px);
+	}
+
+	@include phones {
+		min-width: 73px;
+	}
 }
 
 .menu__name {
+	// white-space: nowrap;
 	text-align: center;
-	width: rem(300px);
 	position: absolute;
+	width: rem(300px);
 	bottom: 45%;
 	left: rem(-110px);
 	transform: rotate(-90deg);
@@ -80,10 +86,6 @@
 	@include phones {
 		bottom: 23%;
 	}
-
-	&:hover {
-		color: $yellow;
-	}
 }
 
 .menu__content {
@@ -93,18 +95,24 @@
 	width: 0;
 	background: rgba($black, .93);
 	overflow: hidden;
+	transition: .5s;
 }
 
 .menu__desc {
-	width: 89%;
+	display: none;
+	width: 87%;
 	height: 82%;
 	font-size: rem(14px);
 	@include ubuntu(light);
 	line-height: rem(24px);
 
 	@include tablets {
-		width: 87%;
 		height: 89%;
+	}
+
+	@include phones {
+		height: 86%;
+		width: 76%;
 	}
 }
 

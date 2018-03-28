@@ -1,0 +1,25 @@
+.popup {
+	position: relative;
+	display: none;
+	width: 500px;
+	border-radius: 5px;
+
+	.opinion__desc {
+		display: block;
+		height: 100%;
+	}
+
+	@include tablets {
+		
+	}
+
+	@include phones {
+		width: 95%;
+	}
+}
+
+.close-popup {
+	position: absolute;
+	right: 3%;
+	top: 5%;
+}

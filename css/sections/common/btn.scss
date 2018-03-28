@@ -7,7 +7,7 @@
 	text-transform: uppercase;
 	display: inline-flex;
 	margin-left: rem(18px);
-
+	vertical-align: text-bottom;
    &:hover {
       background: $red-hover;
    }

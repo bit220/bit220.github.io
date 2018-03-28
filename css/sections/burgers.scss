@@ -1,9 +1,171 @@
 .burgers {
   background-image: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
   background-image: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
-  background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);  
-   height: 100vh;
-   min-height: 650px;
+  background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+ 	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include phones {
+		align-items: flex-start;
+	}
+
+	.container {
+		flex-direction: column;
+	}
 }
 
- 
+.owl-theme .owl-nav {
+	margin-top: 0;
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+	margin: 0;
+	padding: 0;
+	background: none;
+
+	&:hover {
+		background: none;
+	}
+}
+
+.owl-prev {
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	transform: rotate(90deg);
+
+	@include tablets {
+		right: 96%;
+	}
+}
+
+.owl-next {
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	transform: rotate(-90deg);
+
+	@include tablets {
+		left: 96%;
+	}
+}
+
+.burgers-slider {
+	position: relative;
+}
+
+.burgers__main {
+	// height: 490px; // без one page scroll
+	display: flex;
+
+	@include tablets {
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		// height: 100%; // без one page scroll
+	}
+}
+
+.burgers__left {
+	// width: 481px;
+	height: 490px;
+	width: 51%;
+	display: flex;
+	align-items: center;
+
+	@include tablets {
+		// width: 505px;
+		height: 443px;
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	@include phones {
+		height: 438px;
+		width: 100%;
+	}
+}
+
+.owl-carousel .owl-item img {
+
+	@include phones {
+		width: 90%;
+	}
+}
+
+.burgers__left-img {
+	
+	img {
+
+		@include phones {
+			margin: 0 auto;
+		}
+	}
+
+	@include tablets {
+		padding-top: 70px;
+	}
+
+	@include phones {
+		padding-top: 150px;
+	}	
+}
+
+.burgers__right {
+	// width: 455px;
+	width: 49%;
+
+	@include tablets {
+		width: 80%;
+		margin: 0 auto;
+		// height: 50%;
+	}
+
+	@include phones {
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.burgers-right__desc {
+	font-size: 14px;
+	color: $white;
+	@include ubuntu(light);
+	margin-top: 32px;
+	margin-bottom: 5px;
+   line-height: 24px;
+
+	@include tablets {
+		margin-top: 11px;
+		margin-bottom: 16px;
+	}
+
+	@include phones {
+		margin-top: 13px;
+		margin-bottom: 5px;
+	}
+}
+
+.burgers-right__price-title {
+	display: inline-block;
+	color: $red;
+	font-size: rem(72px);
+	@include gagalin;
+
+	@include phones {
+		font-size: 50px;
+	}
+}
+
+.burgers-right__price-measure {
+	display: inline-block;
+	color: $red;
+	font-size: rem(28px);
+	@include gagalin;
+	margin-right: 10px;
+
+	@include phones {
+		font-size: 24px;
+	}
+}
