@@ -134,9 +134,9 @@ $(function(){
 		}
 	}
 
-	$('.wrapper').on('touchmove', function(e){
-		e.preventDefault();
-	});
+	// $('.wrapper').on('touchmove', function(e){
+	// 	e.preventDefault();
+	// });
 
 	$(window).on('wheel keydown', function(e){
 		e.preventDefault();
