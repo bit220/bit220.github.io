@@ -85,7 +85,7 @@ $(function(){
 $(function(){
 	
 	var sections = $('.section');
-	var activeSection = sections.filter('.active');
+	var activeSection;
 	var reqSection;
 	var reqSectionIndex;
 	var position;
@@ -111,21 +111,7 @@ $(function(){
 		$('.fixed-menu__item:first-child').addClass('active');
 	}
 	generateDots();
-
-	function moveSectionFromActive(e){
-		e.preventDefault();
-		activeSection = sections.filter('.active');			
-		if (e.originalEvent.deltaY < 0 || e.keyCode == 38) {
-			reqSection = activeSection.prev();
-		}
-		if (e.originalEvent.deltaY > 0 || e.keyCode == 40) {
-			reqSection = activeSection.next();
-		}
-		reqSectionIndex = reqSection.index();	
-		position = -reqSectionIndex * 100 + '%';
-		move(reqSectionIndex);
-	}
-
+		
 	function moveSectionByNavigation(sectionNum){
 		reqSection = sections.eq(sectionNum);
 		reqSectionIndex = reqSection.index();
@@ -148,8 +134,40 @@ $(function(){
 		}
 	}
 
-	$(window).on('wheel keydown', moveSectionFromActive);
-	document.querySelector('body').addEventListener('touchmove', moveSectionFromActive);
+	$('.wrapper').on('touchmove', function(e){
+		e.preventDefault();
+	});
+
+	$(window).on('wheel keydown', function(e){
+		e.preventDefault();
+		activeSection = sections.filter('.active');
+
+		if (e.originalEvent.deltaY < 0 || e.keyCode == 38) {
+			reqSection = activeSection.prev();
+		}
+		if (e.originalEvent.deltaY > 0 || e.keyCode == 40) {
+			reqSection = activeSection.next();
+		}
+		reqSectionIndex = reqSection.index();	
+		position = -reqSectionIndex * 100 + '%';
+		move(reqSectionIndex);
+	});
+
+	$(window).swipe( {
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+      activeSection = sections.filter('.active');
+
+		if (direction == "down") {
+			reqSection = activeSection.prev();
+		}
+		if (direction == "up") {
+			reqSection = activeSection.next();
+		}
+		reqSectionIndex = reqSection.index();	
+		position = -reqSectionIndex * 100 + '%';
+		move(reqSectionIndex);
+    }
+  });	
 
 	$('body').on('click', '.fixed-menu__item', function(e){
 		e.preventDefault();
@@ -162,7 +180,6 @@ $(function(){
 		var dataNum = $(e.target).attr('data-scroll-to');
 		moveSectionByNavigation(dataNum);
 	});
-	
 
 });
 
