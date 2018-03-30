@@ -61,7 +61,7 @@
 	}
 
 	@include phones {
-		min-width: 73px;
+		min-width: rem(73px);
 	}
 }
 

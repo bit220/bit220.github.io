@@ -1,7 +1,7 @@
 .popup {
 	position: relative;
 	display: none;
-	width: 500px;
+	width: rem(500px);
 	border-radius: 5px;
 
 	.opinion__desc {

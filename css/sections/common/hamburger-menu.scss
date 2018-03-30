@@ -16,8 +16,8 @@
 
 .hamburger__menu-logo {
 	position: absolute;
-	top: 11px;
-	left: 24px;
+	top: rem(11px);
+	left: rem(24px);
 }
 
 .hamburger__menu .nav__hamburger {
@@ -25,13 +25,13 @@
 	text-align: center;
 
 	@include phones {
-		padding-bottom: 145px;
+		padding-bottom: rem(145px);
 	}	
 }
 
 .nav__hamburger .nav__list {
 	display: block;
-	font-size: 22px;
+	font-size: rem(22px);
 }
 
 .nav__hamburger .nav__item {
@@ -39,16 +39,16 @@
 
 	&:after {
 		display: block;
-		margin: 20px auto;
-		width: 6px;
-		height: 6px;
+		margin: rem(20px) auto;
+		width: rem(6px);
+		height: rem(6px);
 	}
 }
 
 .hamburger__menu-close {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: rem(10px);
+	right: rem(10px);
 	color: red;
 	text-decoration: none;
 }

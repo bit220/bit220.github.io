@@ -3535,7 +3535,7 @@ template {
 }
 
 html {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 html, body {
@@ -3544,7 +3544,6 @@ html, body {
 }
 
 body {
-  font-size: 16px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   position: relative;
@@ -3562,7 +3561,7 @@ body {
 
 .maincontent {
   height: 100%;
-  min-height: 650px;
+  min-height: 40.625rem;
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   -o-transition: transform 1s;
@@ -3575,7 +3574,7 @@ body {
   margin: 0 auto;
   position: relative;
   width: 95%;
-  max-width: 940px;
+  max-width: 58.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3621,7 +3620,7 @@ footer {
 }
 
 .section {
-  min-height: 650px;
+  min-height: 40.625rem;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3669,7 +3668,7 @@ footer {
   .section-title_color_white {
     width: 90%;
     margin: auto;
-    line-height: 60px;
+    line-height: 3.75rem;
   }
 }
 
@@ -3709,8 +3708,8 @@ footer {
 
 .hamburger__menu-logo {
   position: absolute;
-  top: 11px;
-  left: 24px;
+  top: 0.6875rem;
+  left: 1.5rem;
 }
 
 .hamburger__menu .nav__hamburger {
@@ -3720,13 +3719,13 @@ footer {
 
 @media screen and (max-width: 480px) {
   .hamburger__menu .nav__hamburger {
-    padding-bottom: 145px;
+    padding-bottom: 9.0625rem;
   }
 }
 
 .nav__hamburger .nav__list {
   display: block;
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 .nav__hamburger .nav__item {
@@ -3735,15 +3734,15 @@ footer {
 
 .nav__hamburger .nav__item:after {
   display: block;
-  margin: 20px auto;
-  width: 6px;
-  height: 6px;
+  margin: 1.25rem auto;
+  width: 0.375rem;
+  height: 0.375rem;
 }
 
 .hamburger__menu-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0.625rem;
+  right: 0.625rem;
   color: red;
   text-decoration: none;
 }
@@ -3801,7 +3800,7 @@ footer {
 .popup {
   position: relative;
   display: none;
-  width: 500px;
+  width: 31.25rem;
   border-radius: 5px;
 }
 
@@ -3925,7 +3924,7 @@ footer {
 }
 
 .hero__present {
-  height: 700px;
+  height: 43.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3966,7 +3965,7 @@ footer {
 @media screen and (max-width: 480px) {
   .hero__img {
     width: 82%;
-    padding-top: 35px;
+    padding-top: 2.1875rem;
   }
 }
 
@@ -4250,7 +4249,7 @@ footer {
 }
 
 .burgers__left {
-  height: 490px;
+  height: 30.625rem;
   width: 51%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4262,7 +4261,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   .burgers__left {
-    height: 443px;
+    height: 27.6875rem;
     width: 70%;
     margin: 0 auto;
   }
@@ -4270,7 +4269,7 @@ footer {
 
 @media screen and (max-width: 480px) {
   .burgers__left {
-    height: 438px;
+    height: 27.375rem;
     width: 100%;
   }
 }
@@ -4289,13 +4288,13 @@ footer {
 
 @media screen and (max-width: 768px) {
   .burgers__left-img {
-    padding-top: 70px;
+    padding-top: 4.375rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .burgers__left-img {
-    padding-top: 150px;
+    padding-top: 9.375rem;
   }
 }
 
@@ -4318,25 +4317,25 @@ footer {
 }
 
 .burgers-right__desc {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #ffffff;
   font-family: 'ubuntulight';
-  margin-top: 32px;
-  margin-bottom: 5px;
-  line-height: 24px;
+  margin-top: 2rem;
+  margin-bottom: 0.3125rem;
+  line-height: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
   .burgers-right__desc {
-    margin-top: 11px;
-    margin-bottom: 16px;
+    margin-top: 0.6875rem;
+    margin-bottom: 1rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .burgers-right__desc {
-    margin-top: 13px;
-    margin-bottom: 5px;
+    margin-top: 0.8125rem;
+    margin-bottom: 0.3125rem;
   }
 }
 
@@ -4349,7 +4348,7 @@ footer {
 
 @media screen and (max-width: 480px) {
   .burgers-right__price-title {
-    font-size: 50px;
+    font-size: 3.125rem;
   }
 }
 
@@ -4358,12 +4357,12 @@ footer {
   color: #e45028;
   font-size: 1.75rem;
   font-family: 'gagalinregular';
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 
 @media screen and (max-width: 480px) {
   .burgers-right__price-measure {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -4647,7 +4646,7 @@ footer {
 
 @media screen and (max-width: 480px) {
   .menu__block {
-    min-width: 73px;
+    min-width: 4.5625rem;
   }
 }
 
@@ -4843,7 +4842,7 @@ footer {
 
 .opinion__desc {
   font-family: 'ubunturegular';
-  height: 144px;
+  height: 9rem;
   overflow: hidden;
   font-size: 0.875rem;
   margin-top: 1.25rem;
@@ -4856,7 +4855,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   .opinion__desc {
-    height: 113px;
+    height: 7.0625rem;
     font-size: 0.8125rem;
     margin-top: 0.5625rem;
   }

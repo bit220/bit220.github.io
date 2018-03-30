@@ -148,7 +148,7 @@ $(function(){
 		}
 	}
 
-	$(window).on('wheel keydown', moveSectionFromActive);
+	$(window).on('wheel keydown touchmove', moveSectionFromActive);
 
 	$('body').on('click', '.fixed-menu__item', function(e){
 		e.preventDefault();

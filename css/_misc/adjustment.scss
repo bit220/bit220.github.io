@@ -3,7 +3,7 @@
 }
 
 html {
-	font-size: 16px;
+	font-size: rem(16px);
 }
 
 html, body {
@@ -12,7 +12,6 @@ html, body {
 }
 
 body {
-	font-size: 16px;
 	line-height: 1.42;
 	-webkit-font-smoothing: antialiased;	
 	position: relative;
@@ -31,7 +30,7 @@ body {
 
 .maincontent {
 	height: 100%;
-	min-height: 650px;
+	min-height: rem(650px);
 	transition: transform 1s;
 	will-change: transform;
 }
@@ -40,7 +39,7 @@ body {
 	margin: 0 auto;
 	position: relative;
 	width: 95%;
-	max-width: 940px;
+	max-width: rem(940px);
 	display: flex;
 
    @include tablets {
@@ -82,24 +81,24 @@ footer {
 }
 
 .section {
-	min-height: 650px;
+	min-height: rem(650px);
 	height: 100vh;
 	display: flex;
 	position: relative;
 }
 
 // .section {
-// 	min-height: 650px;
+// 	min-height: rem(650px);
 // 	height: 100%;
 // 	display: flex;
 // 	position: relative;
 // 	overflow: hidden;	
 
 //    @include tablets {
-//       min-height: 1024px;
+//       min-height: rem(1024px);
 //    }
 
 //    @include phones {
-//       min-height: 800px;
+//       min-height: rem(800px);
 //    }
 // }

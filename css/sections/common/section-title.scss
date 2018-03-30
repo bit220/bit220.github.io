@@ -17,7 +17,7 @@
 		@include phones {
 			width: 90%;
 			margin: auto;
-			line-height: 60px;
+			line-height: rem(60px);
 		}
 	}
 
