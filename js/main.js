@@ -149,7 +149,7 @@ $(function(){
 	}
 
 	$(window).on('wheel keydown', moveSectionFromActive);
-	document.addEventListener('touchmove', moveSectionFromActive);
+	document.querySelector('body').addEventListener('touchmove', moveSectionFromActive);
 
 	$('body').on('click', '.fixed-menu__item', function(e){
 		e.preventDefault();
